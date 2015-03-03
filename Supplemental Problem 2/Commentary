@@ -1,0 +1,91 @@
+Commentary
+
+Numbered Listing of Circumstances:
+ 1) Objects could be null, but these have already been accounted for with
+    the ability for a default constructor to be initialized.  The default 
+    constructor can still go through the methods, although most of it would
+    would be ignored.
+ 2) Objects could have an invalid amount of credits, which would cause 
+    some credit counting problems, but should be covered by class 
+    standing method. 
+ 3) Objects could be legitimate - they should work just fine. 
+ 
+Test Cases to Consider 
+		Regular regular = new Regular("Amanda", "Hinchman", 16, 42, 12, 
+				12, 20, 14, "Computer Science");
+				//expected outcome
+				//Name: Amanda Hinchman
+   				//   Current Enrolled Credits: 16.0
+  				//   Total Credits Earned: 42.0
+   			    //   Category: Regular
+   				//   Class Standing: Second Year, Semester 1
+   				//   Progress: true
+   				//   Registration: true
+   				//   Major: Computer Science
+
+		Alum alum = new Alum("Kim", "Spasaro", 4, 132, "Philosophy");
+				//expected outcome
+				//Name: Kim Spasaro
+   				//   Current Enrolled Credits: 4.0
+   				//   Total Credits Earned: 132.0
+   				//   Category: Alum
+   				//   Class Standing: 
+   				//   Progress: 
+   				//   Registration: true
+   				//   Major: Philosophy
+   				//   Category: Alum
+   				//   Class Standing: 
+   				//   Progress: 
+   				//   Registration: true
+   				//   Major: Philosophy
+
+		Special special = new Special("Drew", "Cooper", 4, 8);
+				//expected outcome
+				//Name: Drew Cooper
+   				//   Current Enrolled Credits: 4.0
+   				//   Total Credits Earned: 8.0
+   				//   Category: Special
+   				//   Class Standing: 
+   				//   Progress: 
+   				//   Registration: true
+   				//   Major: 
+   				//   Category: Special
+   				//   Class Standing: 
+   				//   Progress: 
+   				//   Registration: true
+   				//   Major: 
+				
+		Employee employee = new Employee("Terri", "Wilson", 4, 120, 30, 
+				25, 25, 40, "English");
+				//expected outcome
+				//Name: Terri Wilson
+   				//   Current Enrolled Credits: 4.0
+   				//   Total Credits Earned: 120.0
+   				//   Category: Employee
+   				//   Class Standing: Senior Year, Semester 2
+   				//   Progress: true
+   				//   Registration: true
+   				//   Major: English
+   				//   Category: Employee
+   				//   Class Standing: 
+   				//   Progress: 
+   				//   Registration: true
+   				//   Major: 
+
+		Employee employee3 = new Employee();//expected null outcomes
+				//expected outcome
+				//Name:  
+				//   Current Enrolled Credits: 0.0
+   				//   Total Credits Earned: 0.0
+   				//   Category: Employee
+   				//   Class Standing: Was not able to process the amount of credits...
+   				//   Progress: false
+   				//   Registration: true
+   				//   Major: 
+   				//   Category: Employee
+   				//   Class Standing: 
+   				//   Progress: 
+   				//   Registration: true
+   				//   Major: 
+				
+  

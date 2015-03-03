@@ -1,0 +1,9 @@
+Statement of Correctness 
+
+As far as I know, the output of the given registry is correct - 
+they appear to be working as they should.  When matched with 
+the expected output, the actual output is found to be similar.
+
+Given multiple cases, the registry works for all types of enrolled
+students, students with null information, and considers invalid cases
+of enrolled students.  
